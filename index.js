@@ -23,11 +23,12 @@ function createNewImage(src, alt, left, bottom) {
     item.style.left = left + 'px';
     item.style.bottom = bottom + 'px';
     document.body.appendChild(item);
-  }
   
-  newItem('assets/sword.png', 'Sword', 500, 405);
-  
-  var sword = document.querySelector('img[alt="Sword"]');
-  sword.addEventListener('click', function(){
-      sword.remove();
+  var item = document.querySelector('img[alt="Sword"]');
+  item.addEventListener('dblclick', function(){
+      item.remove();
   });
+}
+newItem('assets/sword.png', 'Sword', 500, 405);
+newItem('assets/shield.png','shield', 165, 185 );
+newItem('assets/staff.png', 'staff', 600, 100);
