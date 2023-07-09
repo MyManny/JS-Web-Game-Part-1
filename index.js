@@ -24,11 +24,17 @@ function createNewImage(src, alt, left, bottom) {
     item.style.bottom = bottom + 'px';
     document.body.appendChild(item);
   
-  var item = document.querySelector('img[alt="Sword"]');
-  item.addEventListener('dblclick', function(){
+    item.addEventListener('dblclick', function(){
       item.remove();
-  });
-}
-newItem('assets/sword.png', 'Sword', 500, 405);
-newItem('assets/shield.png','shield', 165, 185 );
-newItem('assets/staff.png', 'staff', 600, 100);
+    });
+  }
+  
+  newItem('assets/sword.png', 'Sword', 500, 405);
+  newItem('assets/shield.png', 'Shield', 165, 185);
+  newItem('assets/staff.png', 'Staff', 600, 100);
+  
+  document.body.style.backgroundImage = 'url("assets/sky.png"), url("assets/grass.png")';
+  document.body.style.backgroundRepeat = 'no-repeat, no-repeat';
+  document.body.style.backgroundPosition = 'center top, center bottom';
+  document.body.style.backgroundSize = 'cover';
+  
